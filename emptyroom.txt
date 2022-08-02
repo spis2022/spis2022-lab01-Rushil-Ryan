@@ -1,8 +1,10 @@
+#picobot first moves to bottom left corner of grid
 0 **x* -> W 0
 0 **W* -> S 1
 1 ***x -> S 1
 1 ***S -> E 2
 
+#picobot traverses grid left to right, and moves up one row after traversing the row below it
 2 *x** -> E 2
 2 *E** -> N 3   
 3 **x* -> W 3

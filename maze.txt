@@ -1,15 +1,26 @@
+#Each direction is represented by a state: N = 0, E = 1, S = 2, W = 3
+
+#Uses right hand rule to determine when to change direction, represented by first 2 lines of code at each starting state
+
+#If cannot move in intended direction and cannot move in direction to the right, picobot first tries to move in the other horizontal direction if initially travelling vertically or in the other vertical direction if initially travelling horizontally. Represented by 3rd line of code at each starting state
+
+#If picobot cannot move in any of these directions, it will travel in the opposite direction of the initial direction it was traversing. Represented by the 4th line of code at each starting state
+
 0 xE** -> N 0
 0 *x** -> E 1
 0 NEx* -> W 3
 0 NEWx -> S 2
+
 1 *x*S -> E 1
 1 ***x -> S 2
 1 xE*S -> N 0
 1 NExS -> W 3
+
 2 **Wx -> S 2
 2 **x* -> W 3
 2 *xWS -> E 1
 2 xEWS -> N 0
+
 3 N*x* -> W 3
 3 x*** -> N 0
 3 N*Wx -> S 2
